@@ -1,0 +1,25 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+    <p> GRUPO 2 PROGRAMACION WEB.</p>
+        
+      <p>1.starling javier diaz aquino 2021-0416</p> 
+      <p>2.dan luis 2020-10385</p>
+      <p> 3.jeremy jesus veloz prensa 2020-10669</p> 
+      <p>4.marcel j. canario jiminian 2020-9759</p>  
+    
+</div>
